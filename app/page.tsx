@@ -3,9 +3,14 @@
 import { useState } from "react"
 import Hero from "@/components/hero"
 import Navigation from "@/components/navigation"
+import Stats from "@/components/stats"
 import Experience from "@/components/experience"
 import Education from "@/components/education"
 import Skills from "@/components/skills"
+import Projects from "@/components/projects"
+import Certifications from "@/components/certifications"
+import TechStack from "@/components/tech-stack"
+import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
@@ -23,10 +28,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation onMenuClick={scrollToSection} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
-      <Hero onGetStarted={() => scrollToSection("experience")} />
+      <Hero onGetStarted={() => scrollToSection("stats")} />
+      <Stats />
+      <TechStack />
       <Experience />
+      <Projects />
+      <Certifications />
       <Education />
       <Skills />
+      <Testimonials />
       <Contact />
       <Footer />
     </div>
